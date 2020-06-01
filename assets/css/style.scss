@@ -66,30 +66,118 @@ section {
 #landing {
     background-color: $landcolor;
     color: $aboutcolor;
+    height: 95vh;
     .content{
         width: 50%;
         height: 50%;
         .me {
             margin-bottom: 2rem;
             @include justifycenter();
+            justify-content: space-evenly;
+            font-size: 48px;
+        }
+        .hero-welcome {
+          font-size: 36px;
         }
         .icons{
             margin-top: 2rem;
             height: 10%;
             @include justifycenter();
             .contact-info{
+              width: 50%;
                 @include justifycenter();
+                justify-content: space-evenly;
             }
         }
     }
   }
   #about {
     background-color: $aboutcolor;
-    @include textcolor()
+    @include textcolor();
+    height: 50vh;
+    .content{
+      @include justifycenter();
+      width: 50%;
+      height: 50%;
+      .main-text{
+        font-size: 24px;
+      }
+    }
   }
   #projects {
     background-color: $projcolor;
-    @include textcolor()
+    @include textcolor();
+    .content{
+      width: 75%;
+      height: 85%;
+      @include justifycenter();
+      flex-direction: column;
+      justify-content: space-evenly;
+      div {
+        width: 100%;
+        height: 25%;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 1%;
+        img{
+          float: left;
+          height: 100%;
+          width: 28%;
+          border-radius: 10px;
+          margin-right: 1.8%;
+        }
+        h1{
+          float: left;
+          text-align: left;
+          font-size: 28px;
+          width: 50%;
+        }
+        .live, .code{
+          width: 9%;
+          height: 20px;
+          background-color: inherit;
+          border: none;
+          border-radius: 10px;
+          transition: 0.3s;
+          a{
+            text-decoration: none;
+            width: 100%;
+            &:visited{
+              color: $aboutcolor;
+            }
+          }
+          &:hover{
+            background-color: $landcolor;
+            color: $aboutcolor;
+          }
+        }
+        p{
+          float: left;
+          width: 70%;
+          font-size: 18px;
+          text-align: left;
+        }
+      }
+    }
+    .load {
+      background-color: $landcolor;
+      color: $aboutcolor;
+      padding: 10px 0px;
+      border-radius: 10px;
+      border: none;
+      a{
+        text-decoration: none;
+        padding: 10px 30px;
+        transition: 0.3s;
+      &:visited{
+        color: $aboutcolor;
+      }
+      &:hover{
+        padding: 20px 40px;
+        cursor: pointer;
+      }
+      }
+    }
   }
 
   #resources {

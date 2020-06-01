@@ -83,6 +83,7 @@ section {
 #landing {
   background-color: #50514f;
   color: #fbfefb;
+  height: 95vh;
 }
 
 #landing .content {
@@ -102,6 +103,14 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 48px;
+}
+
+#landing .content .hero-welcome {
+  font-size: 36px;
 }
 
 #landing .content .icons {
@@ -120,6 +129,7 @@ section {
 }
 
 #landing .content .icons .contact-info {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,16 +140,139 @@ section {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #about {
   background-color: #fbfefb;
   color: #50514f;
+  height: 50vh;
+}
+
+#about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+}
+
+#about .content .main-text {
+  font-size: 24px;
 }
 
 #projects {
   background-color: #c6ccb2;
   color: #50514f;
+}
+
+#projects .content {
+  width: 75%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#projects .content div {
+  width: 100%;
+  height: 25%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1%;
+}
+
+#projects .content div img {
+  float: left;
+  height: 100%;
+  width: 28%;
+  border-radius: 10px;
+  margin-right: 1.8%;
+}
+
+#projects .content div h1 {
+  float: left;
+  text-align: left;
+  font-size: 28px;
+  width: 50%;
+}
+
+#projects .content div .live, #projects .content div .code {
+  width: 9%;
+  height: 20px;
+  background-color: inherit;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#projects .content div .live a, #projects .content div .code a {
+  text-decoration: none;
+  width: 100%;
+}
+
+#projects .content div .live a:visited, #projects .content div .code a:visited {
+  color: #fbfefb;
+}
+
+#projects .content div .live:hover, #projects .content div .code:hover {
+  background-color: #50514f;
+  color: #fbfefb;
+}
+
+#projects .content div p {
+  float: left;
+  width: 70%;
+  font-size: 18px;
+  text-align: left;
+}
+
+#projects .load {
+  background-color: #50514f;
+  color: #fbfefb;
+  padding: 10px 0px;
+  border-radius: 10px;
+  border: none;
+}
+
+#projects .load a {
+  text-decoration: none;
+  padding: 10px 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#projects .load a:visited {
+  color: #fbfefb;
+}
+
+#projects .load a:hover {
+  padding: 20px 40px;
+  cursor: pointer;
 }
 
 #resources {
