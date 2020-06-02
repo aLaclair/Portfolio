@@ -41,6 +41,7 @@ nav {
           padding: 10px 20px;
           border-radius: 5px;
           transition: 0.3s;
+          @include textcolor();
           &:visited{
               @include textcolor();
           }
@@ -63,11 +64,16 @@ section {
   scroll-snap-align: center;
   @include justifycenter();
 }
+
+/*---------------------------------------------*/
+
 #landing {
     background-color: $landcolor;
     color: $aboutcolor;
     height: 95vh;
     .content{
+      @include justifycenter();
+      flex-direction: column;
         width: 50%;
         height: 50%;
         .me {
@@ -75,7 +81,7 @@ section {
             @include justifycenter();
             justify-content: space-evenly;
             font-size: 48px;
-        }
+        } 
         .hero-welcome {
           font-size: 36px;
         }
@@ -91,6 +97,9 @@ section {
         }
     }
   }
+
+
+
   #about {
     background-color: $aboutcolor;
     @include textcolor();
@@ -104,6 +113,9 @@ section {
       }
     }
   }
+
+
+
   #projects {
     background-color: $projcolor;
     @include textcolor();
@@ -142,6 +154,7 @@ section {
           a{
             text-decoration: none;
             width: 100%;
+            color: $aboutcolor;
             &:visited{
               color: $aboutcolor;
             }
@@ -150,6 +163,12 @@ section {
             background-color: $landcolor;
             color: $aboutcolor;
           }
+        }
+        h2 {
+          font-size: 20px;;
+          float: left;
+          margin-top: 20px;
+          margin-bottom: 20px;
         }
         p{
           float: left;
@@ -180,7 +199,36 @@ section {
     }
   }
 
+
+
   #resources {
     background-color: $rescolor;
-    @include textcolor()
+    height: 50vh;
+    @include textcolor();
+    .content {
+      width: 50%;
+      h1{
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .email{
+        float: left;
+        width: 49.8%;
+        border-right: 1px solid $landcolor;
+        text-align: center;
+      }
+      .cell{
+        float: right;
+        width: 50%;
+      }
+      .contact-info{
+        width: 50%;
+        @include justifycenter();
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 60px;
+      }
+    }
   }

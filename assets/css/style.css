@@ -48,6 +48,7 @@ nav .nav .links li a {
   border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #50514f;
 }
 
 nav .nav .links li a:visited {
@@ -80,6 +81,7 @@ section {
   text-align: center;
 }
 
+/*---------------------------------------------*/
 #landing {
   background-color: #50514f;
   color: #fbfefb;
@@ -87,6 +89,20 @@ section {
 }
 
 #landing .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 50%;
   height: 50%;
 }
@@ -233,6 +249,7 @@ section {
 #projects .content div .live a, #projects .content div .code a {
   text-decoration: none;
   width: 100%;
+  color: #fbfefb;
 }
 
 #projects .content div .live a:visited, #projects .content div .code a:visited {
@@ -242,6 +259,13 @@ section {
 #projects .content div .live:hover, #projects .content div .code:hover {
   background-color: #50514f;
   color: #fbfefb;
+}
+
+#projects .content div h2 {
+  font-size: 20px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #projects .content div p {
@@ -277,6 +301,51 @@ section {
 
 #resources {
   background-color: #bcaf9c;
+  height: 50vh;
   color: #50514f;
+}
+
+#resources .content {
+  width: 50%;
+}
+
+#resources .content h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+#resources .content .email {
+  float: left;
+  width: 49.8%;
+  border-right: 1px solid #50514f;
+  text-align: center;
+}
+
+#resources .content .cell {
+  float: right;
+  width: 50%;
+}
+
+#resources .content .contact-info {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 60px;
 }
 /*# sourceMappingURL=style.css.map */
