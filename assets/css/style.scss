@@ -12,11 +12,18 @@ $landcolor: #50514f;
 $projcolor: #c6ccb2;
 $rescolor: #bcaf9c;
 $aboutcolor: #fbfefb;
+@font-face{
+  src: url(../fonts/Montserrat-Regular.ttf);
+  font-family: main;
+}
+@font-face{
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-family: title;
+}
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scroll-snap-stop: always;
-    overflow: hidden;
+    scroll-snap-type: y proximity;
+    font-family: main;
 }
 nav {
   height: 5vh;
@@ -69,8 +76,12 @@ section {
 
 #landing {
     background-color: $landcolor;
+    background-image: url(../images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: $aboutcolor;
-    height: 95vh;
+    height: 60vh;
+    font-family: title;
     .content{
       @include justifycenter();
       flex-direction: column;
@@ -89,6 +100,7 @@ section {
             margin-top: 2rem;
             height: 10%;
             @include justifycenter();
+            width: 100%;
             .contact-info{
               width: 50%;
                 @include justifycenter();
@@ -103,7 +115,7 @@ section {
   #about {
     background-color: $aboutcolor;
     @include textcolor();
-    height: 50vh;
+    height: 40vh;
     .content{
       @include justifycenter();
       width: 50%;
@@ -169,12 +181,33 @@ section {
           float: left;
           margin-top: 20px;
           margin-bottom: 20px;
+          text-align: left;
+          width: 70%;
         }
         p{
           float: left;
           width: 70%;
-          font-size: 18px;
+          font-size: 1rem;
           text-align: left;
+        }
+        .read{
+          visibility: hidden;
+          background-color: $landcolor;
+          color: $aboutcolor;
+          padding: 10px 10px;
+          border-radius: 10px;
+          border: none;
+          a{
+            color: $aboutcolor;
+            text-decoration: none;
+            transition: 0.3s;
+            &:visited{
+              color: $aboutcolor;
+            }
+            &:hover{
+              padding: 20px 40px
+            }
+          }
         }
       }
     }
@@ -214,12 +247,12 @@ section {
       .email{
         float: left;
         width: 49.8%;
-        border-right: 1px solid $landcolor;
         text-align: center;
       }
       .cell{
         float: right;
         width: 50%;
+        border-left: 1px solid $landcolor;
       }
       .contact-info{
         width: 50%;
@@ -229,6 +262,91 @@ section {
         flex-direction: row;
         justify-content: space-around;
         margin-top: 60px;
+        .tooltiptext{
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    #projects .content div{
+      h2 {
+        height: fit-content;
+      }
+      p{
+        display: none;
+      }
+      .read {
+        visibility: visible;
+      }
+    }
+    #resources{
+      .content{
+        width: 75%;
+      }
+    }
+  }
+  @media screen and (max-width: 980px) {
+    #landing{
+      .content{
+        width: 95%;
+      }
+    }
+    #about{
+      .content{
+        width: 95%;
+      }
+    }
+    #projects{
+      .content{
+        width: 90%;
+        div{
+          img{
+            width: 40%;
+          }
+          h1{
+            width: 30%;
+          }
+          h2 {
+            width: 30%;
+          }
+          .read {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    #projects{
+      .content{
+        width: 95%;
+        height: 95%;
+        div{
+          height: 31%;
+          border: none;
+          img{
+            width: 50%;
+            height: 80%;
+            float: none;
+          }
+          h1{
+            float: none;
+            text-align: center;
+            margin: 5px auto;
+          }
+          h2 {
+            display: none;
+          }
+          .read{
+            visibility: hidden;
+          }
+        }
+      }
+    }
+    #resources{
+      .content{
+        width: 100%;
       }
     }
   }
