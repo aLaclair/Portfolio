@@ -24,6 +24,7 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
     font-family: main;
+    overflow-x: hidden;
 }
 nav {
   height: 5vh;
@@ -221,6 +222,7 @@ section {
         text-decoration: none;
         padding: 10px 30px;
         transition: 0.3s;
+        color: $aboutcolor;
       &:visited{
         color: $aboutcolor;
       }
