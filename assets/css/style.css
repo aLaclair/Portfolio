@@ -334,11 +334,6 @@ section {
   color: #fbfefb;
 }
 
-#projects .load a:hover {
-  padding: 20px 40px;
-  cursor: pointer;
-}
-
 #resources {
   background-color: #bcaf9c;
   height: 50vh;
@@ -437,21 +432,24 @@ section {
 @media screen and (max-width: 720px) {
   #projects .content {
     width: 95%;
-    height: 95%;
+    height: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #projects .content div {
-    height: 31%;
+    height: 30%;
     border: none;
   }
   #projects .content div img {
-    width: 50%;
-    height: 80%;
+    width: 60%;
+    height: 70%;
     float: none;
   }
   #projects .content div h1 {
     float: none;
     text-align: center;
     margin: 5px auto;
+    width: 100%;
   }
   #projects .content div h2 {
     display: none;
@@ -461,6 +459,17 @@ section {
   }
   #resources .content {
     width: 100%;
+  }
+  #resources .content .email, #resources .content .cell {
+    font-size: 14px;
+    width: 47%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  #projects .content .load:hover {
+    padding: 20px 40px;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=style.css.map */

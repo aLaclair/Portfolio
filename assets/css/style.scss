@@ -224,10 +224,6 @@ section {
       &:visited{
         color: $aboutcolor;
       }
-      &:hover{
-        padding: 20px 40px;
-        cursor: pointer;
-      }
       }
     }
   }
@@ -321,19 +317,21 @@ section {
     #projects{
       .content{
         width: 95%;
-        height: 95%;
+        height: 100%;
+        justify-content: space-around;
         div{
-          height: 31%;
+          height: 30%;
           border: none;
           img{
-            width: 50%;
-            height: 80%;
+            width: 60%;
+            height: 70%;
             float: none;
           }
           h1{
             float: none;
             text-align: center;
             margin: 5px auto;
+            width: 100%;
           }
           h2 {
             display: none;
@@ -341,12 +339,38 @@ section {
           .read{
             visibility: hidden;
           }
+          .live{
+            &:hover {
+              
+            }
+          }
         }
       }
     }
     #resources{
       .content{
         width: 100%;
+        .email, .cell{
+          font-size: 14px;
+          width: 47%;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 1240px) {
+    #projects{
+      .content{
+        div{
+          .live{
+            &:hover
+          }
+        }
+        .load{
+          &:hover{
+            padding: 20px 40px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
