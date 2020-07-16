@@ -4,14 +4,11 @@
   align-items: center;
   text-align: center;
 }
-@mixin textcolor {
-    color: $landcolor
-}
-$navcolor: #d5d0cd;
-$landcolor: #50514f;
-$projcolor: #c6ccb2;
-$rescolor: #bcaf9c;
-$aboutcolor: #fbfefb;
+$navcolor: #000000;
+$landcolor: #999999;
+$projcolor: #666666;
+$rescolor: #EEEEEE;
+$aboutcolor: #000000;
 @font-face{
   src: url(../fonts/Montserrat-Regular.ttf);
   font-family: main;
@@ -31,10 +28,10 @@ nav {
   width: 100vw;
   display: flex;
   position: fixed;
-  bottom: 0;
+  top: 0;
   background-color: $navcolor;
   @include justifycenter();
-  @include textcolor();
+  color: white;
   .nav {
       width: 100%;
     .links {
@@ -49,12 +46,13 @@ nav {
           padding: 10px 20px;
           border-radius: 5px;
           transition: 0.3s;
-          @include textcolor();
+          color: white;;
           &:visited{
-              @include textcolor();
+              color: white;;
           }
           &:hover{
-              background-color: $aboutcolor;
+              background-color: white;
+              color: #999999;
               padding: 15px 40px;
           }
         }
@@ -76,10 +74,7 @@ section {
 /*---------------------------------------------*/
 
 #landing {
-    background-color: $landcolor;
-    background-image: url(../images/background-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $landcolor;;
     color: $aboutcolor;
     height: 60vh;
     font-family: title;
@@ -115,7 +110,7 @@ section {
 
   #about {
     background-color: $aboutcolor;
-    @include textcolor();
+    color: white;
     height: 40vh;
     .content{
       @include justifycenter();
@@ -131,7 +126,7 @@ section {
 
   #projects {
     background-color: $projcolor;
-    @include textcolor();
+    color: black;
     .content{
       width: 75%;
       height: 85%;
@@ -236,7 +231,7 @@ section {
   #resources {
     background-color: $rescolor;
     height: 50vh;
-    @include textcolor();
+    color: black;
     .content {
       width: 50%;
       h1{
@@ -286,6 +281,11 @@ section {
     }
   }
   @media screen and (max-width: 980px) {
+    nav {
+      position: fixed;
+      top: initial;
+      bottom: 0;
+    }
     #landing{
       .content{
         width: 95%;
@@ -365,7 +365,9 @@ section {
       .content{
         div{
           .live{
-            &:hover
+            &:hover{
+              
+            }
           }
         }
         .load{
