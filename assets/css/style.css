@@ -499,16 +499,16 @@ section {
   #projects .content div .read {
     margin-top: 20px;
   }
-  #projects .content .game img {
+  #projects .content .eclipse img {
     float: left;
     margin-right: 1.8%;
     margin-left: 0;
   }
-  #projects .content .game .proj-title {
+  #projects .content .eclipse .proj-title {
     float: left;
     text-align: start;
   }
-  #projects .content .game .live, #projects .content .game .code {
+  #projects .content .eclipse .live, #projects .content .eclipse .code {
     float: right;
   }
 }
@@ -575,14 +575,14 @@ section {
   #projects .content div .read {
     visibility: hidden;
   }
-  #projects .content .game img {
+  #projects .content .eclpse img {
     float: none;
   }
-  #projects .content .game .proj-title {
+  #projects .content .eclpse .proj-title {
     float: none;
     text-align: center;
   }
-  #projects .content .game .live, #projects .content .game .code {
+  #projects .content .eclpse .live, #projects .content .eclpse .code {
     float: none;
   }
   #resources .content {
