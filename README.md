@@ -1,4 +1,4 @@
-## Portfolio
+# Portfolio
 This is my portfolio, please check it out at [thelaclair.com](https://thelaclair.com)
 
 ## Technologies used
