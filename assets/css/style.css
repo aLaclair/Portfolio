@@ -575,14 +575,14 @@ section {
   #projects .content div .read {
     visibility: hidden;
   }
-  #projects .content .eclpse img {
+  #projects .content .eclipse img {
     float: none;
   }
-  #projects .content .eclpse .proj-title {
+  #projects .content .eclipse .proj-title {
     float: none;
     text-align: center;
   }
-  #projects .content .eclpse .live, #projects .content .eclpse .code {
+  #projects .content .eclipse .live, #projects .content .eclipse .code {
     float: none;
   }
   #resources .content {

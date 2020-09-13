@@ -439,13 +439,8 @@ section {
           .read{
             visibility: hidden;
           }
-          .live{
-            &:hover {
-              
-            }
-          }
         }
-        .eclpse {
+        .eclipse {
           img {
             float: none;
           }
@@ -473,13 +468,6 @@ section {
   @media screen and (min-width: 1240px) {
     #projects{
       .content{
-        div{
-          .live{
-            &:hover{
-              
-            }
-          }
-        }
         .load{
           &:hover{
             padding: 20px 40px;
