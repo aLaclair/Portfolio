@@ -358,22 +358,22 @@ section {
           filter: drop-shadow(2px 2px 10px black);
 }
 
-#projects .content .game img {
+#projects .content .eclipse img {
   float: right;
   margin-right: 0;
   margin-left: 1.8%;
 }
 
-#projects .content .game .proj-title {
+#projects .content .eclipse .proj-title {
   float: right;
   text-align: end;
 }
 
-#projects .content .game .proj-description {
+#projects .content .eclipse .proj-description {
   text-align: justify;
 }
 
-#projects .content .game .live, #projects .content .game .code {
+#projects .content .eclipse .live, #projects .content .eclipse .code {
   float: left;
 }
 
