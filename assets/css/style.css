@@ -9,9 +9,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
   font-family: main;
   overflow-x: hidden;
 }
@@ -230,11 +227,44 @@ section {
 #projects {
   background-color: #666666;
   color: black;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #projects .content {
-  width: 75%;
-  height: 85%;
+  width: 95%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#projects .content div {
+  background-color: #666666;
+  width: 25%;
+  height: 80vh;
+  border-radius: 10px;
+  padding: 1%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,37 +279,36 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-#projects .content div {
-  background-color: #666666;
-  width: 100%;
-  height: 25%;
-  border-radius: 10px;
-  padding: 1%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 #projects .content div img {
-  float: left;
-  height: 100%;
-  width: 28%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 60vh;
   border-radius: 10px;
-  margin-right: 1.8%;
 }
 
 #projects .content div h1 {
-  float: left;
-  text-align: left;
+  margin: 0;
+  text-align: center;
+  padding: 2vh;
   font-size: 28px;
   width: 50%;
 }
 
-#projects .content div .live, #projects .content div .code {
+#projects .content div .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  height: 5%;
+}
+
+#projects .content div .buttons .live, #projects .content div .buttons .code {
   width: 9%;
   height: 20px;
   background-color: inherit;
@@ -289,17 +318,17 @@ section {
   transition: 0.5s;
 }
 
-#projects .content div .live a, #projects .content div .code a {
+#projects .content div .buttons .live a, #projects .content div .buttons .code a {
   text-decoration: none;
   width: 100%;
   color: #000000;
 }
 
-#projects .content div .live a:visited, #projects .content div .code a:visited {
+#projects .content div .buttons .live a:visited, #projects .content div .buttons .code a:visited {
   color: #000000;
 }
 
-#projects .content div .live:hover, #projects .content div .code:hover {
+#projects .content div .buttons .live:hover, #projects .content div .buttons .code:hover {
   background-color: #999999;
   color: #000000;
 }
@@ -356,25 +385,6 @@ section {
   background-color: #707070;
   -webkit-filter: drop-shadow(2px 2px 10px black);
           filter: drop-shadow(2px 2px 10px black);
-}
-
-#projects .content .eclipse img {
-  float: right;
-  margin-right: 0;
-  margin-left: 1.8%;
-}
-
-#projects .content .eclipse .proj-title {
-  float: right;
-  text-align: end;
-}
-
-#projects .content .eclipse .proj-description {
-  text-align: justify;
-}
-
-#projects .content .eclipse .live, #projects .content .eclipse .code {
-  float: left;
 }
 
 #projects .load {
@@ -574,16 +584,6 @@ section {
   }
   #projects .content div .read {
     visibility: hidden;
-  }
-  #projects .content .eclipse img {
-    float: none;
-  }
-  #projects .content .eclipse .proj-title {
-    float: none;
-    text-align: center;
-  }
-  #projects .content .eclipse .live, #projects .content .eclipse .code {
-    float: none;
   }
   #resources .content {
     width: 100%;
